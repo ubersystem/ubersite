@@ -1,0 +1,46 @@
+Objetivos
+
+montar modelo do banco para postgres
+montar modelo do banco para mysql
+
+[] Conseguir baixar, instalar e rodar.
+
+
+Menu
+
+    posts
+    pages
+    categories
+    tags
+    media
+    menu
+    users
+    profile
+    permissions
+    newletter
+    settings
+
+
+/api
+/cms
+/
+
+
+/posts/2021/02/06/slug
+/page/slug
+/category/slug
+/tags/
+
+
+telas
+
+login
+cadastrar
+esqueceu a senha
+redefinir a senha
+
+lista de usuarios
+lista de posts
+lista de paginas
+tela de criação de menu
+lista de arquivos
