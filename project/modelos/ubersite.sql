@@ -272,7 +272,6 @@ insert into ubersite.categories
 
 select * from ubersite.categories;
 
-
 insert into ubersite.media 
 ( active, user_id, title, slug, uri, path, file, ext ) values
 ( true, 1, 'relatorio 1', 'relatorio-1', 'http://localhost', 'files', 'relatorio01', '.pdg' );

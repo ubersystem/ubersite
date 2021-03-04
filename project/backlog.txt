@@ -1,10 +1,26 @@
 Objetivos
 
-montar modelo do banco para postgres
-montar modelo do banco para mysql
+[x] montar modelo do banco para postgres
+[] montar modelo do banco para mysql
 
-[] Conseguir baixar, instalar e rodar.
+[x] Conseguir baixar, instalar e rodar.
 
+
+API
+    criar models para todas as tabelas
+    conexao com o banco
+    models
+    services
+
+    criar controller para o cms
+    criar controllers para a api
+    criar controller para paginas do site
+
+    configurar rotas para o CMS
+    configurar rotas para a api
+    configurar rotas para o site
+
+    configurar login e jwt
 
 Menu
 

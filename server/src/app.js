@@ -14,7 +14,7 @@ import CategoriesController from "./controllers/site/categoriesController";
 import SearchController from "./controllers/site/searchController";
 
 // Routes
-//import auth from './routes/auth';
+import auth from './routes/auth';
 import api from './routes/api';
 
 const app = express();
@@ -65,7 +65,7 @@ app.get("/category/:slug", categoriesController.category);
 app.get("/search/:slug", searchController.search);
 
 
-//app.use('/auth', auth);
+app.use('/auth', auth);
 app.use('/api', authMiddleware, api);
 
 
