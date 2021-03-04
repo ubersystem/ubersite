@@ -46,28 +46,3 @@ tela de criação de menu
 lista de arquivos
 
 
-
-
-Como Executar o projeto
-
-# execute o front na porta 8080
-
-# entrar na pasta
-cd web
-
-# instalar dependencias
-yarn install
-
-# executa a aplicação
-yarn start
-
-# em outra guia execute o server
-
-# entrar na pasta
-cd server
-
-# instalar dependencias
-yarn install
-
-# executa a aplicação na porta 8081
-yarn start
