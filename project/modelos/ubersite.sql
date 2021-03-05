@@ -14,6 +14,8 @@ drop table if exists ubersite.newletter;
 
 drop table if exists ubersite.posts;
 
+drop table if exists ubersite.pages;
+
 drop table if exists ubersite.tags;
 
 drop table if exists ubersite.categories;
@@ -121,6 +123,30 @@ CREATE TABLE IF NOT EXISTS ubersite.users (
 
 /** Posts  **/
 CREATE TABLE IF NOT EXISTS ubersite.posts (
+    id           SERIAL,
+    active       boolean default false,
+    user_id      integer NOT NULL,
+    
+    title 		 text NOT NULL,
+    slug         text NOT NULL,
+    resume       text,
+    content 	 text,
+    
+    publish  	 timestamp,
+    status		 integer default 0,
+    image_cover	 text,
+    thumbnail    text,
+    
+	created_at	 timestamp NOT NULL DEFAULT NOW(),
+    updated_at	 timestamp NOT NULL DEFAULT NOW(),
+     
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id)
+    	REFERENCES ubersite.users (id)
+);
+
+/** Pages  **/
+CREATE TABLE IF NOT EXISTS ubersite.pages (
     id           SERIAL,
     active       boolean default false,
     user_id      integer NOT NULL,
@@ -255,6 +281,13 @@ insert into ubersite.posts
 ( true, 1, 'titulo 4', ' titulo-4', 'resume', 'content', null, 1, '', '' );
 
 select * from ubersite.posts;
+
+insert into ubersite.pages 
+( active, user_id, title, slug, resume, content, publish, status, image_cover, thumbnail  ) values
+( true, 1, 'Page 1', ' Page-1', 'resume', 'content', null, 1, '', '' ),
+( true, 1, 'Page 2', ' Page-2', 'resume', 'content', null, 1, '', '' );
+
+select * from ubersite.pages;
 
 insert into ubersite.tags 
 ( active, user_id, title, slug, tag ) values

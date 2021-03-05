@@ -4,9 +4,10 @@ import categoriesController from '../controllers/api/categoriesController';
 import logsController from '../controllers/api/logsController';
 import mediasController from '../controllers/api/mediasController';
 import menusController from '../controllers/api/menusController';
-import newsletterController from '../controllers/api/newsletterController';
+import newslettersController from '../controllers/api/newslettersController';
 import permissionsController from '../controllers/api/permissionsController';
 import postsController from '../controllers/api/postsController';
+import pagesController from '../controllers/api/pagesController';
 import settingsController from '../controllers/api/settingsController';
 import tagsController from '../controllers/api/tagsController';
 import usersController from '../controllers/api/usersController';
@@ -39,11 +40,11 @@ router.put('/menus/:id', menusController.update);
 router.delete('/menus/:id', menusController.remove);
 
 
-router.get('/newsletter', newsletterController.getAll);
-router.get('/newsletter/:id', newsletterController.getById);
-router.post('/newsletter', newsletterController.insert);
-router.put('/newsletter/:id', newsletterController.update);
-router.delete('/newsletter/:id', newsletterController.remove);
+router.get('/newsletters', newslettersController.getAll);
+router.get('/newsletters/:id', newslettersController.getById);
+router.post('/newsletters', newslettersController.insert);
+router.put('/newsletters/:id', newslettersController.update);
+router.delete('/newsletters/:id', newslettersController.remove);
 
 router.get('/permissions', permissionsController.getAll);
 router.get('/permissions/:id', permissionsController.getById);
@@ -57,6 +58,12 @@ router.get('/posts/:id', postsController.getById);
 router.post('/posts', postsController.insert);
 router.put('/posts/:id', postsController.update);
 router.delete('/posts/:id', postsController.remove);
+
+router.get('/pages', pagesController.getAll);
+router.get('/pages/:id', pagesController.getById);
+router.post('/pages', pagesController.insert);
+router.put('/pages/:id', pagesController.update);
+router.delete('/pages/:id', pagesController.remove);
 
 router.get('/settings', settingsController.getAll);
 router.get('/settings/:id', settingsController.getById);
