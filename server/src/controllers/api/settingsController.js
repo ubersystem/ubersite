@@ -1,4 +1,4 @@
-import model from '../../models/userModel';
+import model from '../../models/settingModel';
 
 const getAll = async function (req, res) {
 

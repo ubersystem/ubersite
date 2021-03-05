@@ -1,4 +1,4 @@
-import model from '../../models/userModel';
+import model from '../../models/mediaModel';
 
 const getAll = async function (req, res) {
 
