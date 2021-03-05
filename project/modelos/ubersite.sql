@@ -18,7 +18,7 @@ drop table if exists ubersite.tags;
 
 drop table if exists ubersite.categories;
 
-drop table if exists ubersite.media;
+drop table if exists ubersite.medias;
 
 drop table if exists ubersite.users;
 
@@ -180,7 +180,7 @@ CREATE TABLE IF NOT EXISTS ubersite.categories (
 );
 
 /** Media  **/
-CREATE TABLE IF NOT EXISTS ubersite.media (
+CREATE TABLE IF NOT EXISTS ubersite.medias (
     id           SERIAL,
     active       boolean default false,
     user_id      integer NOT NULL,
@@ -272,11 +272,11 @@ insert into ubersite.categories
 
 select * from ubersite.categories;
 
-insert into ubersite.media 
+insert into ubersite.medias 
 ( active, user_id, title, slug, uri, path, file, ext ) values
 ( true, 1, 'relatorio 1', 'relatorio-1', 'http://localhost', 'files', 'relatorio01', '.pdg' );
 
-select * from ubersite.media;
+select * from ubersite.medias;
 
 
 

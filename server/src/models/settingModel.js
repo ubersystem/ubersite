@@ -4,21 +4,13 @@ class UserModel {
 
     constructor() {
         this.model = new Model({
-            table_name: 'ubersite.users',
+            table_name: 'ubersite.settings',
             fields: [
                 'id',
                 'active',
-                
-                'permission_id',
-                'first_name',
-                'last_name',
-                'avatar',
-                'email',
-                'password',
-                'mobile',
-                'mobile_check',
-                'email_check',
-                'hash',
+
+                'key',
+                'value',
                 
                 'created_at',
                 'updated_at',
