@@ -4,7 +4,7 @@ class UserModel {
 
     constructor() {
         this.model = new Model({
-            table_name: 'ubersite.tags',
+            table_name: 'ubersite.categories',
             fields: [
                 'id',
                 'active',
