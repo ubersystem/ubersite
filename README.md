@@ -8,6 +8,21 @@ Criado com Express, Node, Vue.js e CoreUI Free.
 
 ## 🚀 Começando
 
+Nosso projeto consiste em facilitar a criação de sites e blogs através de uma plataforma pré configurada.
+
+A ideia consiste em, após a instalação possamos inserir um template e personalizar algumas páginas de forma prática e rápida.
+
+Outro ponto era ter uma alternativa ao wordpress que não fosse php.
+
+Inicialmente teremos duas opções de banco de dados, sendo elas: Postgres e MySQL.
+
+### 📋 Pré-requisitos
+
+Para instalar a aplicação será necessário ter um servidor node, 
+durante o desenvolvimento e testes as aplicações serão executadas separadamente, mas para produção, a aplicação de frontend deverá ser buildada e apenas será executada a aplicação server
+
+### 🔧 Instalação
+
 Executando o Front-end
 
 ```
@@ -17,7 +32,7 @@ $ git clone git@github.com:ubersystem/ubersite.git
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd ubersite
 
-# Vá para a pasta da aplicação Front End
+# Vá para a pasta da aplicação Front
 $ cd web
 
 # Instale as dependências
@@ -38,7 +53,7 @@ $ git clone git@github.com:ubersystem/ubersite.git
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd ubersite
 
-# Vá para a pasta da aplicação Front End
+# Vá para a pasta da aplicação Server
 $ cd server
 
 # Instale as dependências
@@ -49,11 +64,6 @@ $ yarn start
 
 # A aplicação será aberta na porta:8081 - acesse http://localhost:8081
 ```
-
-### 📋 Pré-requisitos
-
-
-### 🔧 Instalação
 
 
 ## ⚙️ Executando os testes
