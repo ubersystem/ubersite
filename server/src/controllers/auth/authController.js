@@ -1,29 +1,48 @@
 import jwt from 'jsonwebtoken';
+import model from '../../models/userModel';
 
 const login = async function (req, res) {
 
     const JWT_KEY = process.env.JWT_KEY;
+    const JWT_EXPIRE = process.env.JWT_EXPIRE;
     
-    let token = jwt.sign({
-        user_id: 30,
-        name: 'Juliano Carneiro',
-        email: req.body.email
-    }, 
-    JWT_KEY,
-    {
-        expiresIn: "6h"
-    })
+    const email = req.body.data.login;
+    const password = req.body.data.password;
 
-    res.status(200)
-    .json({
-        success: true, 
-        token,
-        dados: {
-            email: req.body.email,
-            password: req.body.password
-        }, 
-        message: 'Order encontrado login'
-    })
+    try {
+        const rs = await model.getByField('email', email);
+        const user = rs[0];
+
+        if(user && user.password == password){
+            let token = jwt.sign({
+                id: user.id,
+                name: user.first_name,
+                email: user.email
+            }, 
+            JWT_KEY,
+            {
+                expiresIn: JWT_EXPIRE
+            })
+        
+            res.status(200)
+            .json({
+                success: true, 
+                data: {
+                    id: user.id,
+                    name: user.first_name,
+                    email: user.email
+                },
+                token
+            })
+        }else{
+            // usuario ou senha incorretos
+            res.status(401).json({ success: false, message: `usuario ou senha incorretos` });
+        }
+
+    } catch (error) {
+        res.status(200).json({ success: false, message: `${error}` });
+    }
+
 }
 
 const logout = async function (req, res) {

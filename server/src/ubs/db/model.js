@@ -82,9 +82,15 @@ class Model{
         var sql = `SELECT * FROM ${this.table_name} WHERE id=$1;`;
         var recordset = await this.db.query(sql, [id]);
 
-        if(recordset.rowCount == 0){
-            throw "Error: Registro não localizado";
-        }
+        this.data = recordset.rows;
+        return this;
+        
+    }
+
+    async findByField(field, value) {
+
+        var sql = `SELECT * FROM ${this.table_name} WHERE ${field}=$1;`;
+        var recordset = await this.db.query(sql, [value]);
 
         this.data = recordset.rows;
         return this;

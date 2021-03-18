@@ -35,6 +35,10 @@ class UserModel {
         return (await this.model.find(id)).get();
     }
 
+    async getByField (field, value) {
+        return (await this.model.findByField(field, value)).get();
+    }
+
     async insert (data) {
         return (await this.model.create(data)).get();
     }
